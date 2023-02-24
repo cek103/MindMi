@@ -2,10 +2,18 @@ package com.example.mindmi;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CalendarView;
 import android.widget.TextView;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
@@ -17,23 +25,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        CalendarView calendarView = findViewById(R.id.calendarView);
-        TextView selectedDay = findViewById(R.id.selectedDay);
 
-        // String months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December".};
+        // navigation bar
+        DrawerLayout drawerLayout = findViewById(R.id.drawLayout);
 
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+        // open menu when clicked on
+        findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int y, int m, int d) {
-                // convert int month to string name
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(Calendar.MONTH, m);
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMM");
-                simpleDateFormat.setCalendar(calendar);
-                String monthName = simpleDateFormat.format(calendar.getTime());
-
-                selectedDay.setText(monthName + " " + String.valueOf(d));
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+
+        NavigationView navigationView = findViewById(R.id.navigationView);
+
+        NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
+        NavigationUI.setupWithNavController(navigationView, navController);
     }
 }

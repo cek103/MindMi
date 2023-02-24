@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/journals"
+        android:name="com.example.mindmi.JournalsFragment"
+        android:label="Journals"
+        tools:layout="@layout/fragment_journals" />
+    <fragment
+        android:id="@+id/diaries"
+        android:name="com.example.mindmi.DiaryFragment"
+        android:label="Diaries"
+        tools:layout="@layout/fragment_diary" />
+    <fragment
+        android:id="@+id/activities"
+        android:name="com.example.mindmi.ActivitiesFragment"
+        android:label="Activities"
+        tools:layout="@layout/fragment_activities" />
+    <fragment
+        android:id="@+id/goals"
+        android:name="com.example.mindmi.GoalsFragment"
+        android:label="Goals"
+        tools:layout="@layout/fragment_goals" />
+    <fragment
+        android:id="@+id/reports"
+        android:name="com.example.mindmi.ReportsFragment"
+        android:label="Reports"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/reminders"
+        android:name="com.example.mindmi.RemindersFragment"
+        android:label="Reminders"
+        tools:layout="@layout/fragment_reminders" />
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.mindmi.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+</navigation>

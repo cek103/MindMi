@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="Home"
+        />
+
+    <item
+        android:id="@+id/journals"
+        android:icon="@drawable/journal"
+        android:title="Journals"
+        />
+
+    <item
+        android:id="@+id/diaries"
+        android:icon="@drawable/diary"
+        android:title="Diaries"
+        />
+
+    <item
+        android:id="@+id/activities"
+        android:icon="@drawable/activities"
+        android:title="Activities"
+        />
+
+    <item
+        android:id="@+id/goals"
+        android:icon="@drawable/goals"
+        android:title="Goals"
+        />
+
+    <item
+        android:id="@+id/reminders"
+        android:icon="@drawable/reminders"
+        android:title="Reminders"
+        />
+
+    <item
+        android:id="@+id/reports"
+        android:icon="@drawable/reports"
+        android:title="Reports"
+        />
+</menu>
