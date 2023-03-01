@@ -1,6 +1,5 @@
 package com.example.mindmi;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -10,16 +9,10 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CalendarView;
-import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalTime;
-import java.util.Calendar;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         NavigationView navigationView = findViewById(R.id.navigationView);
-
         NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 }

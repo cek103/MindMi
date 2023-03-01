@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -45,7 +44,8 @@ public class HomeFragment extends Fragment {
                 String monthName = simpleDateFormat.format(calendar.getTime());
 
                 // display date under calendar
-                selectedDay.setText(monthName + " " + String.valueOf(d));
+                String display = monthName + " " + String.valueOf(d);
+                selectedDay.setText(display);
             }
         });
 
